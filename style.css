@@ -1,0 +1,200 @@
+/* === Импорт красивых шрифтов === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cherry+Bomb+One&display=swap');
+
+/* === ГЛОБАЛЬНЫЕ СТИЛИ === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #fff6fb; /* нежный розово-белый фон */
+    color: #4a2c4a;       /* мягкий розовый графит */
+    line-height: 1.8;
+    font-size: 20px;      /* крупный и приятный текст */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* === ШАПКА / МЕНЮ === */
+header {
+    background: #ffbfe7;
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2000;
+    box-shadow: 0 4px 15px rgba(255, 100, 180, 0.3);
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #4a154b;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
+    text-shadow: 0 0 10px #ff5ebc;
+}
+
+/* === ОБЩИЕ ОТСТУПЫ СЕКЦИЙ === */
+section {
+    padding: 120px 30px 80px;
+}
+
+/* === ЗАГОЛОВКИ === */
+h1, h2 {
+    font-family: "Cherry Bomb One", cursive;
+    color: #d62f7f;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* === HERO-БЛОК (главная) === */
+#hero {
+    background: linear-gradient(135deg, #ffd8ef, #ffe8f5);
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    border-bottom: 4px solid #ff9cd2;
+    box-shadow: 0 8px 20px rgba(255, 120, 200, 0.25);
+}
+
+#hero p {
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+    color: #6f315f;
+}
+
+/* === БЛОК "О ЗАКАЗАХ" === */
+#about p {
+    background: #ffe6f4;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid #ffb6dd;
+    max-width: 900px;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(255, 140, 200, 0.2);
+}
+
+/* === ГАЛЕРЕЯ === */
+.gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 18px;
+    border: 4px solid #ffbade;
+    box-shadow: 0 6px 18px rgba(255, 110, 190, 0.25);
+    transition: 0.3s;
+    background: white;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(255, 90, 175, 0.35);
+}
+
+/* === ФОРМА ОБРАТНОЙ СВЯЗИ === */
+form {
+    max-width: 500px;
+    margin: auto;
+    background: #ffeaf5;
+    padding: 25px;
+    border-radius: 22px;
+    border: 3px solid #ffb2df;
+    box-shadow: 0 6px 20px rgba(255, 110, 190, 0.25);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 2px solid #ffb7df;
+    background: white;
+    font-size: 20px;
+    color: #4a2c4a;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff6bb7;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 120, 200, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #ff69b4;
+    color: white;
+    font-size: 22px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff49a0;
+    box-shadow: 0 4px 15px rgba(255, 100, 180, 0.4);
+}
+
+/* === ФУТЕР === */
+footer {
+    background: #ffb6dd;
+    color: #4a1345;
+    text-align: center;
+    padding: 30px 10px;
+    border-top: 4px solid #ff95cf;
+    font-size: 20px;
+}
+
+footer a {
+    color: #4a1345;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.social svg {
+    width: 34px;
+    fill: #4a1345;
+    transition: 0.3s;
+}
+
+.social svg:hover {
+    fill: white;
+    filter: drop-shadow(0 0 6px #ff4fae);
+}
