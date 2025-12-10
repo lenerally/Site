@@ -1,7 +1,9 @@
 /* === Импорт шрифтов === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cherry+Bomb+One&display=swap');
 
-/* === Общие стили === */
+/* === ГЛАВНЫЕ СТИЛИ === */
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     padding: 0;
@@ -12,11 +14,9 @@ body {
     font-size: 20px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-/* === Меню === */
+/* === ШАПКА / МЕНЮ === */
 header {
     background: #ffbfe7;
     padding: 20px 0;
@@ -27,9 +27,7 @@ header {
     box-shadow: 0 4px 15px rgba(255, 100, 180, 0.3);
 }
 
-nav {
-    text-align: center;
-}
+nav { text-align: center; }
 
 nav a {
     margin: 0 20px;
@@ -37,25 +35,21 @@ nav a {
     color: #4a154b;
     font-size: 22px;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.25s;
 }
 
-nav a:hover {
-    color: white;
-    text-shadow: 0 0 10px #ff5ebc;
-}
+nav a:hover { color: white; text-shadow: 0 0 10px #ff5ebc; }
 
-/* === Секции === */
-section {
-    padding: 120px 30px 80px;
-}
+/* Чтобы контент не скрывался за фиксированной шапкой */
+section { padding: 140px 30px 80px; }
 
-h1, h2 {
-    font-family: "Cherry Bomb One", cursive;
-    color: #d62f7f;
-}
+/* === Заголовки === */
+h1, h2 { font-family: "Cherry Bomb One", cursive; color: #d62f7f; }
 
-/* === Hero === */
+h1 { font-size: 48px; text-align: center; margin-bottom: 15px; }
+h2 { font-size: 38px; text-align: center; margin-bottom: 25px; }
+
+/* === HERO === */
 #hero {
     background: linear-gradient(135deg, #ffd8ef, #ffe8f5);
     text-align: center;
@@ -65,14 +59,9 @@ h1, h2 {
     box-shadow: 0 8px 20px rgba(255, 120, 200, 0.25);
 }
 
-#hero p {
-    font-size: 22px;
-    max-width: 700px;
-    margin: auto;
-    color: #6f315f;
-}
+#hero p { font-size: 22px; max-width: 700px; margin: auto; color: #6f315f; }
 
-/* === About текстовые блоки === */
+/* === ABOUT === */
 #about p {
     background: #ffe6f4;
     padding: 20px;
@@ -87,21 +76,25 @@ h1, h2 {
 .gallery {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 30px;
     padding: 10px;
 }
 
+.gallery a { display: block; }
 .gallery img {
     width: 100%;
-    border-radius: 18px;
+    height: auto;
+    display: block;
+    border-radius: 14px;
     border: 4px solid #ffbade;
-    background: white;
     box-shadow: 0 6px 18px rgba(255, 110, 190, 0.25);
-    transition: 0.3s;
+    transition: transform 0.25s, box-shadow 0.25s;
+    background: white;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 10px 25px rgba(255, 90, 175, 0.35);
 }
 
@@ -116,15 +109,21 @@ form {
     box-shadow: 0 6px 20px rgba(255, 110, 190, 0.25);
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 15px;
     margin-bottom: 18px;
     border-radius: 12px;
     border: 2px solid #ffb7df;
-    font-size: 20px;
     background: white;
+    font-size: 18px;
+    color: #4a2c4a;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff6bb7;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 120, 200, 0.3);
 }
 
 button {
@@ -132,16 +131,14 @@ button {
     padding: 15px;
     background: #ff69b4;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     border: none;
     border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.2s;
 }
-
-button:hover {
-    background: #ff49a0;
-}
+button:hover { background: #ff49a0; }
 
 /* === Footer === */
 footer {
@@ -150,49 +147,60 @@ footer {
     text-align: center;
     padding: 30px 10px;
     border-top: 4px solid #ff95cf;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-/* === Иконки + подписи === */
-
+/* === Social icons (уменьшены) === */
 .social-with-labels {
     display: flex;
     justify-content: center;
-    gap: 28px;
+    gap: 22px;
     margin-top: 14px;
+    align-items: center;
 }
 
 .social-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 .social-item a {
-    width: 38px;
-    height: 38px;
-    display: flex;
-    justify-content: center;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
     align-items: center;
-    border-radius: 12px;
+    justify-content: center;
+    border-radius: 8px;
     background: rgba(74,19,69,0.06);
-    transition: 0.3s;
+    transition: transform 0.18s, background 0.18s;
+    text-decoration: none;
 }
 
 .social-item a:hover {
-    background: #ff7dc4;
+    transform: translateY(-3px);
+    background: linear-gradient(135deg,#ff8ac0,#ff5ebc);
 }
 
 .social-item svg {
-    width: 22px;
-    height: 22px;
+    width: 18px;
+    height: 18px;
     fill: #4a1345;
 }
 
 .social-item span {
     margin-top: 6px;
-    font-size: 14px;
+    font-size: 13px;
     color: #4a1345;
     font-weight: 600;
 }
 
+/* Небольшая адаптивность */
+@media (max-width:600px) {
+  nav a { margin: 0 10px; font-size:18px; }
+  h1 { font-size:36px; }
+  h2 { font-size:28px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  section { padding: 120px 16px 60px; }
+}
