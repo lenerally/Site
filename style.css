@@ -7,9 +7,9 @@ body {
     padding: 0;
     font-family: "Poppins", sans-serif;
     background: #fff6fb; /* нежный розово-белый фон */
-    color: #4a2c4a;       /* мягкий розовый графит */
+    color: #4a2c4a;
     line-height: 1.8;
-    font-size: 20px;      /* крупный и приятный текст */
+    font-size: 20px;
 }
 
 html {
@@ -68,7 +68,7 @@ h2 {
     margin-bottom: 25px;
 }
 
-/* === HERO-БЛОК (главная) === */
+/* === HERO-БЛОК === */
 #hero {
     background: linear-gradient(135deg, #ffd8ef, #ffe8f5);
     text-align: center;
@@ -119,7 +119,7 @@ h2 {
     box-shadow: 0 10px 25px rgba(255, 90, 175, 0.35);
 }
 
-/* === ФОРМА ОБРАТНОЙ СВЯЗИ === */
+/* === ФОРМА === */
 form {
     max-width: 500px;
     margin: auto;
@@ -188,13 +188,48 @@ footer a:hover {
     color: white;
 }
 
-.social svg {
-    width: 34px;
+/* === НОВЫЙ БЛОК С ИКОНКАМИ И ПОДПИСЯМИ === */
+
+.social-with-labels {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    color: #4a1345;
+    font-weight: 600;
+}
+
+.social-item a {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(74,19,69,0.06);
+    transition: 0.3s;
+}
+
+.social-item a:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(135deg,#ff8ac0,#ff5ebc);
+}
+
+.social-item svg {
+    width: 26px;
+    height: 26px;
     fill: #4a1345;
     transition: 0.3s;
 }
 
-.social svg:hover {
+.social-item a:hover svg {
     fill: white;
-    filter: drop-shadow(0 0 6px #ff4fae);
 }
+
